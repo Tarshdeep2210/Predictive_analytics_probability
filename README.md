@@ -19,15 +19,15 @@ To model the probability density function (PDF) of a transformed random variable
 
 Each value of ( x ) is transformed into ( z ) using a roll-number-based transformation:
 
-[z = x + a_r \sin(b_r x)]
+z = x + a*sin(b x)
 
 Where:
 
-[a_r = 0.05 (r \mod 7)]
+a = 0.05 (r mod 7)
 
-[b_r = 0.3 (r \mod 5 + 1)]
+b = 0.3 (r mod 5 + 1)
 
-Roll Number:[r = 102316050]
+Roll Number: r = 102316050
 
 ### Methodology
 
@@ -40,7 +40,7 @@ Roll Number:[r = 102316050]
 
 #### Phase 2: Data Transformation
 
-* Compute parameters ( a_r ) and ( b_r )
+* Compute parameters ( a ) and ( b)
 * Apply transformation to obtain ( z )
 * Visualize transformed distribution
 
@@ -48,13 +48,13 @@ Roll Number:[r = 102316050]
 
 Assume Gaussian PDF:
 
-[\hat{p}(z) = c e^{-\lambda (z - \mu)^2}]
+z = x + a*sin(bx)
 
 Parameters estimated using **Maximum Likelihood Estimation (MLE)**:
 
-* ( \mu ) → Mean of transformed data
-* ( \lambda ) → Precision parameter
-* ( c ) → Normalization constant
+* mu  → Mean of transformed data
+* lambda  → Precision parameter
+* c  → Normalization constant
 
 #### Phase 4: PDF Visualization
 
@@ -80,24 +80,22 @@ To learn the probability density function of a transformed random variable **wit
 
 ### Mathematical Formulation
 
-[z = x + a_r \sin(b_r x)]
+z = x + a_r*sin(b_r x)
 
 Where:
 
-[a_r = 0.5 (r \mod 7)]
+a_r = 0.5 (r mod 7)
 
-[b_r = 0.3 (r \mod 5 + 1)]
+b_r = 0.3 (r mod 5 + 1)
 
-Roll Number:
-
-[r = 102316050]
+Roll Number:r = 102316050
 
 Parameter values used:
 
 | Parameter | Value |
 | --------- | ----- |
 | a_r       | 2.0   |
-| b_r       | 1.5   |
+| b_r       | 0.3   |
 
 ### Methodology
 
@@ -153,9 +151,9 @@ Training Parameters:
 
 | Parameter     | Value  |
 | ------------- | ------ |
-| Epochs        | 5000   |
-| Batch Size    | 64     |
-| Learning Rate | 0.0002 |
+| Epochs        | 2000   |
+| Batch Size    | 128    |
+| Learning Rate | 0.001  |
 | Optimizer     | Adam   |
 
 ### Phase 5: PDF Estimation
